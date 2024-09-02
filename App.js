@@ -7,7 +7,7 @@ const Header = () => {
       <div classname="logo-container">
         <img
           className="logo"
-          src="https://pics.craiyon.com/2023-05-30/af89e757b5b44b9e9888858b98817801.webp"
+          src="https://thumbs.dreamstime.com/b/food-delivery-logo-design-template-fast-delivery-service-sign-food-delivery-app-vector-logo-design-template-167491511.jpg"
         ></img>
       </div>
       <div className="nav-items">
@@ -22,10 +22,36 @@ const Header = () => {
   );
 };
 
+const RestaurauntCard = () => {
+  return (
+    <div className="res-card">
+      <img
+        className="res-logo"
+        alt="pic"
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHrXWTUKQZI_OEBPfN5G-5HHM1U_15k23lyA&s"
+      />
+      <h3>Biriyani Pot</h3>
+      <h5> Briyani,North Indian, Chats</h5>
+      <h4>4.5</h4>
+      <h4>35min</h4>
+    </div>
+  );
+};
+
+const Body = () => {
+  return (
+    <div className="body">
+      <div className="search">Search</div>
+      <RestaurauntCard />
+    </div>
+  );
+};
+
 const AppLayout = () => {
   return (
     <div className="app">
       <Header />
+      <Body />
     </div>
   );
 };
