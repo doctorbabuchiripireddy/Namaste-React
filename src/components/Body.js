@@ -13,7 +13,7 @@ const Body = () => {
 
   const fetchData = async () => {
     try {
-      const response = await fetch("http://10.0.0.2:8087/api/restaurant", {
+      const response = await fetch("http://10.0.0.105:8087/api/restaurant", {
         method: "GET",
         credentials: "include",
       });
