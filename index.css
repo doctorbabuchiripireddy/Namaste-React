@@ -102,12 +102,12 @@
 }
 
 .res-logo {
-  width: 100%;
-  height: auto;
-  max-height: 200px;
-  object-fit: contain;
+  width: 150px; /* Fixed width for uniform logo size */
+  height: 150px; /* Fixed height for uniform logo size */
+  object-fit: contain; /* Ensures the whole image is visible without being cropped */
   border-radius: 10px;
   margin-bottom: 15px;
+  background-color: #f0f0f0; /* Optional: background color to fill empty spaces if aspect ratio differs */
 }
 
 .res-card h3 {
