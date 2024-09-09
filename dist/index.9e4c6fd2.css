@@ -97,10 +97,10 @@
 
 .res-logo {
   object-fit: contain;
+  background-color: #f0f0f0;
   border-radius: 10px;
-  width: 100%;
-  height: auto;
-  max-height: 200px;
+  width: 150px;
+  height: 150px;
   margin-bottom: 15px;
 }
 
