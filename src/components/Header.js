@@ -1,8 +1,13 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import useOnlineStatus from "../utils/useOnlineStatus";
+import { useSelector } from "react-redux";
 
 const Header = () => {
   const [btnName, setbtnName] = useState("Login");
+
+  const onlineStatus = useOnlineStatus();
+  const cartItems = useSelector((store) => store.cart.items);
   return (
     <div className="header">
       <div className="logo-container">
@@ -14,9 +19,10 @@ const Header = () => {
       </div>
       <div className="nav-items">
         <ul>
+          <li>Status: {onlineStatus ? "Online ✅" : "Offline 🔴"}</li>
           <li>
             {" "}
-            <Link to="/">Home </Link>
+            <Link to="/home">Home </Link>
           </li>
           <li>
             {" "}
@@ -26,9 +32,20 @@ const Header = () => {
             {" "}
             <Link to="/contact">Contact Us</Link>
           </li>
-          <li>Cart</li>
+          <li>
+            {" "}
+            <Link to="/">Back </Link>
+          </li>
+          <li>
+            {" "}
+            <Link to="/cart">Cart({cartItems.length}items)</Link>
+          </li>
+          <li>
+            {" "}
+            <Link to="/orders">Orders</Link>
+          </li>
           <button
-            className="login"
+            className="here"
             onClick={() => {
               btnName === "Login" ? setbtnName("Logout") : setbtnName("Login");
             }}

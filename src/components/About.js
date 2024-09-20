@@ -1,3 +1,5 @@
+import UserClass from "./UserClass";
+
 const About = () => {
   return (
     <div>
@@ -9,6 +11,10 @@ const About = () => {
         <h3 className="about">
           This is a Pandugo application which gives information about restaurant
         </h3>
+        <UserClass
+          name={"Doctor Babu Chiripireddy"}
+          location={"Johns creek, Atlanta"}
+        />
       </div>
     </div>
   );
